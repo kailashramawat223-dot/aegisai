@@ -1,0 +1,9 @@
+services:
+  aegisai:
+    build: .
+    ports: ["8000:8000"]
+    environment:
+      JWT_SECRET: change-me-in-prod
+    security_opt: ["no-new-privileges:true"]
+    cap_drop: [ALL]
+    read_only: false
